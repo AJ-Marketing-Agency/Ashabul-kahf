@@ -1,0 +1,187 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 600" fill="none">
+  <defs>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#155E45"></stop>
+      <stop offset="1" stop-color="#65AE7D"></stop>
+    </linearGradient>
+    <linearGradient id="page" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#FFFFFF"></stop>
+      <stop offset="1" stop-color="#EAF3E8"></stop>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#F8DE91"></stop>
+      <stop offset="1" stop-color="#C69A3D"></stop>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#174E38" flood-opacity=".13"></feDropShadow>
+    </filter>
+    <style>
+      .float {
+        animation: float 5s ease-in-out infinite;
+      }
+      .float2 {
+        animation: float 6s ease-in-out infinite;
+        animation-delay: -2.5s;
+      }
+      .spark {
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: sparkle 4s ease-in-out infinite;
+      }
+      .spark2 { animation-delay: -2s; }
+      .light {
+        animation: light 5s ease-in-out infinite;
+      }
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-7px); }
+      }
+      @keyframes sparkle {
+        0%, 100% { opacity: .3; transform: scale(.9); }
+        50% { opacity: 1; transform: scale(1.1); }
+      }
+      @keyframes light {
+        0%, 100% { opacity: .6; }
+        50% { opacity: 1; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { animation: none !important; }
+      }
+    </style>
+  </defs>
+
+  <!-- White background -->
+  <rect width="700" height="600" rx="20" fill="#FFFFFF"></rect>
+
+  <!-- Soft green backdrop -->
+  <circle cx="350" cy="285" r="220" fill="#F3F9F3"></circle>
+  <circle cx="350" cy="285" r="185" stroke="#E3F0E4" stroke-width="1.5" stroke-dasharray="4 9"></circle>
+
+  <!-- Islamic arch -->
+  <path d="M165 440 V225
+    Q165 126 258 126
+    Q284 60 350 42
+    Q416 60 442 126
+    Q535 126 535 225 V440" stroke="#C8E2CC" stroke-width="3" fill="#F9FCF9"></path>
+
+  <path d="M190 440 V235
+    Q190 150 275 150
+    Q298 91 350 74
+    Q402 91 425 150
+    Q510 150 510 235 V440" stroke="#E0EEE1" stroke-width="2"></path>
+
+  <!-- Decorative mosque silhouette -->
+  <g fill="#DCEBDD">
+    <path d="M480 306 V255 Q480 229 503 215
+      Q526 229 526 255 V306Z"></path>
+    <path d="M490 218 V180 H496 V163 H510 V180 H516 V218Z"></path>
+    <path d="M496 163 Q503 149 510 163Z"></path>
+    <path d="M180 306 V270 Q180 248 199 235
+      Q218 248 218 270 V306Z"></path>
+    <path d="M188 239 V205 H194 V190 H204 V205 H210 V239Z"></path>
+    <path d="M194 190 Q199 178 204 190Z"></path>
+    <path d="M310 300 V273 Q310 251 329 239
+      Q348 251 348 273 V300Z"></path>
+    <path d="M319 244 V219 H325 V204 H333 V219 H339 V244Z"></path>
+    <path d="M325 204 Q329 194 333 204Z"></path>
+  </g>
+
+  <!-- Crescent -->
+  <g class="float" transform="translate(477 94)">
+    <path d="M0 -22 A24 24 0 1 0 24 12
+      A19 19 0 0 1 0 -22Z" fill="url(#gold)"></path>
+    <path d="M34 -19 L37 -11 L45 -8 L37 -5 L34 3 L31 -5 L23 -8 L31 -11Z" fill="#D2A94C"></path>
+  </g>
+
+  <!-- Floating left book -->
+  <g class="float" filter="url(#shadow)" transform="translate(115 245) rotate(-12)">
+    <path d="M-42 -26 Q-20 -37 0 -22 V25
+      Q-20 11 -42 20Z" fill="#FFFFFF" stroke="#79AC83" stroke-width="2"></path>
+    <path d="M0 -22 Q20 -37 42 -26 V20
+      Q20 11 0 25Z" fill="#E6F2E7" stroke="#79AC83" stroke-width="2"></path>
+    <path d="M-33 -19 Q-18 -24 -8 -17 M-33 -10 Q-18 -15 -8 -8
+      M8 -17 Q20 -24 33 -19 M8 -8 Q20 -15 33 -10" stroke="#9AC4A0" stroke-width="2" stroke-linecap="round"></path>
+    <path d="M0 -22 V25" stroke="#C59D4C" stroke-width="2"></path>
+  </g>
+
+  <!-- Floating right book -->
+  <g class="float2" filter="url(#shadow)" transform="translate(573 297) rotate(10)">
+    <rect x="-31" y="-34" width="62" height="68" rx="5" fill="#1D6B4E"></rect>
+    <rect x="-25" y="-28" width="50" height="56" rx="3" stroke="#DCC078" stroke-width="1.5"></rect>
+    <path d="M0 -15 L5 -5 L15 0 L5 5 L0 15
+      L-5 5 L-15 0 L-5 -5Z" stroke="#E7CD83" stroke-width="1.5"></path>
+    <circle r="3" fill="#E7CD83"></circle>
+  </g>
+
+  <!-- Floating educational cards -->
+  <g class="float2" filter="url(#shadow)">
+    <rect x="145" y="345" width="83" height="54" rx="10" fill="#FFFFFF" stroke="#D9EADB" stroke-width="1.5"></rect>
+    <circle cx="164" cy="363" r="7" fill="#6EA77A"></circle>
+    <path d="M178 360 H213 M178 368 H205 M158 382 H214" stroke="#C1D9C4" stroke-width="3" stroke-linecap="round"></path>
+  </g>
+
+  <g class="float" filter="url(#shadow)">
+    <rect x="478" y="370" width="78" height="50" rx="10" fill="#FFFFFF" stroke="#D9EADB" stroke-width="1.5"></rect>
+    <path d="M494 404 V391 L505 382 L516 391 V404Z" stroke="#5E9E70" stroke-width="2" stroke-linejoin="round"></path>
+    <path d="M500 404 V395 H510 V404" stroke="#5E9E70" stroke-width="2"></path>
+    <path d="M523 389 H542 M523 397 H538 M523 405 H542" stroke="#C1D9C4" stroke-width="2.5" stroke-linecap="round"></path>
+  </g>
+
+  <!-- Central book stand -->
+  <ellipse cx="350" cy="477" rx="190" ry="22" fill="#E8F1E8"></ellipse>
+
+  <g filter="url(#shadow)">
+    <path d="M263 422 L350 465 L437 422 L350 490Z" fill="#86552F" stroke="#C79D5B" stroke-width="2.5"></path>
+    <path d="M280 427 L350 465 L420 427" stroke="#E8C785" stroke-width="2"></path>
+    <path d="M320 447 L350 478 L380 447" stroke="#9A693D" stroke-width="3"></path>
+  </g>
+
+  <!-- Main open book -->
+  <g filter="url(#shadow)">
+    <path d="M185 350 Q266 316 350 359 V443
+      Q267 405 185 429Z" fill="url(#page)" stroke="#A8C7A7" stroke-width="2.5"></path>
+    <path d="M515 350 Q434 316 350 359 V443
+      Q433 405 515 429Z" fill="url(#page)" stroke="#A8C7A7" stroke-width="2.5"></path>
+
+    <path d="M350 359 V443" stroke="#B8A16B" stroke-width="2.5"></path>
+
+    <!-- Decorative page lines -->
+    <g stroke="#BDD6BE" stroke-width="2" stroke-linecap="round">
+      <path d="M204 364 Q267 342 330 369"></path>
+      <path d="M204 377 Q267 355 330 382"></path>
+      <path d="M204 390 Q267 368 330 395"></path>
+      <path d="M204 403 Q267 381 330 408"></path>
+      <path d="M496 364 Q433 342 370 369"></path>
+      <path d="M496 377 Q433 355 370 382"></path>
+      <path d="M496 390 Q433 368 370 395"></path>
+      <path d="M496 403 Q433 381 370 408"></path>
+    </g>
+
+    <!-- Gold center ornament -->
+    <path d="M338 353 L350 345 L362 353 L350 365Z" fill="url(#gold)"></path>
+    <circle cx="350" cy="355" r="3" fill="#FFFFFF"></circle>
+  </g>
+
+  <!-- Gold sparkles -->
+  <g fill="#D2AA4D">
+    <path class="spark" d="M249 192 L253 203 L264 207 L253 211 L249 222 L245 211 L234 207 L245 203Z"></path>
+    <path class="spark spark2" d="M450 255 L453 263 L461 266 L453 269 L450 277 L447 269 L439 266 L447 263Z"></path>
+    <circle class="spark spark2" cx="286" cy="282" r="4"></circle>
+    <circle class="spark" cx="416" cy="174" r="3"></circle>
+    <circle class="spark spark2" cx="547" cy="190" r="3"></circle>
+  </g>
+
+  <!-- Green ornamental leaves -->
+  <g stroke="#8FBE96" stroke-width="2" stroke-linecap="round">
+    <path d="M78 472 Q91 436 119 420"></path>
+    <path d="M91 448 Q65 447 61 426 Q83 425 91 448Z" fill="#CDE5CE"></path>
+    <path d="M100 436 Q102 411 123 404 Q127 425 100 436Z" fill="#B6D9BA"></path>
+    <path d="M622 472 Q609 436 581 420"></path>
+    <path d="M609 448 Q635 447 639 426 Q617 425 609 448Z" fill="#CDE5CE"></path>
+    <path d="M600 436 Q598 411 577 404 Q573 425 600 436Z" fill="#B6D9BA"></path>
+  </g>
+
+  <!-- Grounding accent -->
+  <path d="M175 510 Q350 535 525 510" stroke="#DDEBDD" stroke-width="2" stroke-linecap="round"></path>
+</svg>

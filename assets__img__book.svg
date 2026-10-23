@@ -1,0 +1,279 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" class="img-fluid modern-education-visual" role="img" aria-labelledby="educationTitle educationDesc" style="width:100%;height:auto;overflow:visible">
+
+  <title id="educationTitle">مرکز دانش و آموزش</title>
+  <desc id="educationDesc">کتاب باز، گوی دانش و عناصر متحرک آموزشی</desc>
+
+  <defs>
+    <radialGradient id="eduBackground">
+      <stop offset="0%" stop-color="#e8f8f3"></stop>
+      <stop offset="70%" stop-color="#f4f9ff"></stop>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"></stop>
+    </radialGradient>
+
+    <linearGradient id="eduBook" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#20b486"></stop>
+      <stop offset="100%" stop-color="#087f8c"></stop>
+    </linearGradient>
+
+    <linearGradient id="eduPage" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"></stop>
+      <stop offset="100%" stop-color="#dcece9"></stop>
+    </linearGradient>
+
+    <linearGradient id="eduGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffe8a3"></stop>
+      <stop offset="100%" stop-color="#e6a72f"></stop>
+    </linearGradient>
+
+    <linearGradient id="eduGlass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity=".96"></stop>
+      <stop offset="100%" stop-color="#d7f5ef" stop-opacity=".62"></stop>
+    </linearGradient>
+
+    <radialGradient id="eduGlow">
+      <stop offset="0%" stop-color="#43d9b0" stop-opacity=".38"></stop>
+      <stop offset="100%" stop-color="#43d9b0" stop-opacity="0"></stop>
+    </radialGradient>
+
+    <filter id="eduShadow" x="-40%" y="-40%" width="180%" height="200%">
+      <feDropShadow dx="0" dy="16" stdDeviation="15" flood-color="#145b50" flood-opacity=".16"></feDropShadow>
+    </filter>
+
+    <filter id="eduSoftGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="5" result="blur"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="blur"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+
+    <style>
+      .edu-float {
+        animation: eduFloat 5s ease-in-out infinite;
+      }
+
+      .edu-float-delay {
+        animation: eduFloat 6s ease-in-out infinite;
+        animation-delay: -2s;
+      }
+
+      .edu-orbit {
+        transform-box: view-box;
+        transform-origin: 300px 300px;
+        animation: eduRotate 28s linear infinite;
+      }
+
+      .edu-orbit-reverse {
+        transform-box: view-box;
+        transform-origin: 300px 300px;
+        animation: eduRotate 36s linear infinite reverse;
+      }
+
+      .edu-pulse {
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: eduPulse 3s ease-in-out infinite;
+      }
+
+      .edu-shimmer {
+        stroke-dasharray: 5 10;
+        animation: eduDash 12s linear infinite;
+      }
+
+      @keyframes eduFloat {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-12px); }
+      }
+
+      @keyframes eduRotate {
+        to { transform: rotate(360deg); }
+      }
+
+      @keyframes eduPulse {
+        0%, 100% { opacity: .65; transform: scale(.96); }
+        50% { opacity: 1; transform: scale(1.06); }
+      }
+
+      @keyframes eduDash {
+        to { stroke-dashoffset: -150; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .edu-float,
+        .edu-float-delay,
+        .edu-orbit,
+        .edu-orbit-reverse,
+        .edu-pulse,
+        .edu-shimmer {
+          animation: none !important;
+        }
+      }
+    </style>
+  </defs>
+
+  <!-- Background glow -->
+  <circle cx="300" cy="300" r="245" fill="url(#eduBackground)"></circle>
+  <circle cx="300" cy="300" r="180" fill="url(#eduGlow)" class="edu-pulse"></circle>
+
+  <!-- Orbit rings -->
+  <g fill="none" opacity=".65">
+    <ellipse cx="300" cy="310" rx="220" ry="92" stroke="#8ddbc8" stroke-width="1.5" transform="rotate(-25 300 310)"></ellipse>
+
+    <ellipse cx="300" cy="310" rx="185" ry="125" stroke="#b9d8f2" stroke-width="1.5" stroke-dasharray="4 10" class="edu-orbit"></ellipse>
+
+    <ellipse cx="300" cy="310" rx="235" ry="65" stroke="#d5c6f5" stroke-width="1.5" stroke-dasharray="3 12" class="edu-orbit-reverse"></ellipse>
+  </g>
+
+  <!-- Orbiting particles -->
+  <g class="edu-orbit">
+    <circle cx="300" cy="75" r="6" fill="#16a985"></circle>
+    <circle cx="300" cy="75" r="12" fill="none" stroke="#16a985" stroke-opacity=".35"></circle>
+  </g>
+
+  <g class="edu-orbit-reverse">
+    <circle cx="300" cy="105" r="5" fill="#e5ad42"></circle>
+  </g>
+
+  <g fill="#20b486">
+    <circle cx="135" cy="190" r="4" class="edu-pulse"></circle>
+    <circle cx="465" cy="190" r="3"></circle>
+    <circle cx="115" cy="375" r="3" class="edu-pulse"></circle>
+    <circle cx="485" cy="390" r="4" class="edu-pulse"></circle>
+  </g>
+
+  <g fill="#e5ad42">
+    <circle cx="185" cy="125" r="4"></circle>
+    <circle cx="430" cy="125" r="3" class="edu-pulse"></circle>
+    <circle cx="450" cy="460" r="3"></circle>
+  </g>
+
+  <!-- Left floating education card -->
+  <g class="edu-float" filter="url(#eduShadow)">
+    <rect x="52" y="238" width="132" height="100" rx="18" fill="url(#eduGlass)" stroke="#ffffff" stroke-width="2"></rect>
+
+    <rect x="68" y="253" width="34" height="34" rx="11" fill="#d9f6ed"></rect>
+
+    <g fill="none" stroke="#128c70" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M74 263 Q84 259 85 266 V279 Q80 273 74 276 Z"></path>
+      <path d="M96 263 Q87 259 85 266 V279 Q91 273 96 276 Z"></path>
+    </g>
+
+    <rect x="68" y="298" width="85" height="5" rx="2.5" fill="#b4dcd1"></rect>
+    <rect x="68" y="310" width="62" height="5" rx="2.5" fill="#d2e9e3"></rect>
+
+    <circle cx="160" cy="266" r="5" fill="#e6b54b"></circle>
+  </g>
+
+  <!-- Right floating education card -->
+  <g class="edu-float-delay" filter="url(#eduShadow)">
+    <rect x="414" y="212" width="132" height="105" rx="18" fill="url(#eduGlass)" stroke="#ffffff" stroke-width="2"></rect>
+
+    <rect x="430" y="228" width="35" height="35" rx="11" fill="#fff0cb"></rect>
+
+    <g fill="none" stroke="#c28b1f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M441 243 A7 7 0 1 1 454 247 Q451 251 451 254 H444 Q444 250 441 247 Z"></path>
+      <path d="M445 257 H450 M446 261 H449"></path>
+    </g>
+
+    <rect x="430" y="276" width="87" height="5" rx="2.5" fill="#d4e9e5"></rect>
+    <rect x="430" y="288" width="65" height="5" rx="2.5" fill="#d4e9e5"></rect>
+
+    <circle cx="520" cy="236" r="4" fill="#20b486"></circle>
+  </g>
+
+  <!-- Achievement card -->
+  <g class="edu-float" filter="url(#eduShadow)" style="animation-delay:-1.5s">
+    <rect x="428" y="386" width="118" height="72" rx="16" fill="url(#eduGlass)" stroke="#ffffff" stroke-width="2"></rect>
+
+    <circle cx="450" cy="409" r="11" fill="#e3f7ed"></circle>
+
+    <path d="M445 409 L449 413 L456 405" fill="none" stroke="#15966f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+
+    <rect x="445" y="430" width="80" height="5" rx="2.5" fill="#c4e6dc"></rect>
+    <rect x="445" y="441" width="55" height="4" rx="2" fill="#dfefeb"></rect>
+  </g>
+
+  <!-- Central book -->
+  <g filter="url(#eduShadow)">
+    <ellipse cx="300" cy="427" rx="145" ry="27" fill="#0c8e72" opacity=".10"></ellipse>
+
+    <!-- Page thickness -->
+    <path d="M174 336 L294 389 L294 421 L174 366 Z" fill="#d4e7e2"></path>
+    <path d="M426 336 L306 389 L306 421 L426 366 Z" fill="#b9d9d2"></path>
+
+    <path d="M180 343 L294 394 L294 403 L180 352 Z" fill="#f8fffd"></path>
+    <path d="M420 343 L306 394 L306 403 L420 352 Z" fill="#eaf8f4"></path>
+
+    <!-- Open pages -->
+    <path d="M174 322
+             Q231 307 300 350
+             L300 397
+             Q235 357 174 370 Z" fill="url(#eduPage)" stroke="#c8e3db" stroke-width="1.5"></path>
+
+    <path d="M426 322
+             Q369 307 300 350
+             L300 397
+             Q365 357 426 370 Z" fill="url(#eduPage)" stroke="#c8e3db" stroke-width="1.5"></path>
+
+    <!-- Book cover -->
+    <path d="M166 318
+             Q232 299 300 343
+             L300 354
+             Q231 313 166 332 Z" fill="url(#eduBook)"></path>
+
+    <path d="M434 318
+             Q368 299 300 343
+             L300 354
+             Q369 313 434 332 Z" fill="#087e76"></path>
+
+    <!-- Page details -->
+    <g stroke="#9fcfc1" stroke-width="2.5" stroke-linecap="round" opacity=".9">
+      <path d="M199 334 L264 354"></path>
+      <path d="M199 344 L258 363"></path>
+      <path d="M205 355 L271 378"></path>
+      <path d="M401 334 L336 354"></path>
+      <path d="M401 344 L342 363"></path>
+      <path d="M395 355 L329 378"></path>
+    </g>
+
+    <path d="M300 343 L300 397" stroke="#128d78" stroke-width="3"></path>
+  </g>
+
+  <!-- Central knowledge orb -->
+  <g class="edu-float-delay">
+    <circle cx="300" cy="230" r="82" fill="url(#eduGlow)"></circle>
+    <circle cx="300" cy="230" r="53" fill="#dff8f0" opacity=".75"></circle>
+
+    <circle cx="300" cy="230" r="42" fill="#ffffff" fill-opacity=".75" stroke="#8ddbc8" stroke-width="1.5"></circle>
+
+    <circle cx="300" cy="230" r="32" fill="none" stroke="#6dcbb2" stroke-width="1.5" stroke-dasharray="4 6" class="edu-orbit"></circle>
+
+    <g stroke="#69c9af" stroke-width="2" opacity=".9">
+      <path d="M282 218 L300 205 L320 220 L315 244 L290 250 L282 218"></path>
+      <path d="M300 205 L300 230 L315 244"></path>
+      <path d="M282 218 L300 230 L290 250"></path>
+    </g>
+
+    <g fill="#169d7c" filter="url(#eduSoftGlow)">
+      <circle cx="282" cy="218" r="5"></circle>
+      <circle cx="300" cy="205" r="5"></circle>
+      <circle cx="320" cy="220" r="5"></circle>
+      <circle cx="315" cy="244" r="5"></circle>
+      <circle cx="290" cy="250" r="5"></circle>
+      <circle cx="300" cy="230" r="6" fill="#e5b447"></circle>
+    </g>
+  </g>
+
+  <!-- Animated connecting lines -->
+  <g fill="none" stroke-width="1.5" stroke-dasharray="4 7" class="edu-shimmer" opacity=".7">
+    <path d="M183 274 Q225 240 255 252" stroke="#4dbda1"></path>
+    <path d="M345 250 Q385 233 414 255" stroke="#e0b44f"></path>
+  </g>
+
+  <!-- Gold sparkle -->
+  <g class="edu-pulse" transform="translate(390 155)">
+    <path d="M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3 Z" fill="url(#eduGold)"></path>
+  </g>
+
+</svg>
